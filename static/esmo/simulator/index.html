@@ -140,6 +140,7 @@
 
 
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             const svgDoc = document.getElementById('device-svg');
             const inputContainer = document.getElementById('input-container');
@@ -151,12 +152,9 @@
                 }
             }
 
-        setInputContainerWidth(); // Set initial width
+            setInputContainerWidth(); // Set initial width
 
-        window.addEventListener('resize', setInputContainerWidth); // Update on resize
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const svgDoc = document.getElementById('device-svg');
+            window.addEventListener('resize', setInputContainerWidth); // Update on resize
 
             if (svgDoc) {
                 svgDoc.addEventListener('click', function (event) {
@@ -209,7 +207,8 @@
                 .then(response => response.json())
                 .then(responseData => {
                     console.log('API Response:', responseData);
-                    alert('API request sent successfully!' + username + msg);
+                    alert('API request sent successfully!\n' + 'User: ' + username + '\nMessage: ' + msg);
+                    // alert('API request sent successfully!');
                 })
                 .catch(error => {
                     console.error('API Error:', error);
