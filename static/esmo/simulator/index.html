@@ -10,21 +10,21 @@
             display: block;
             margin: 0 auto;
             max-width: 1200px;
+            max-height: 90%;
         }
 
         #input-container {
             position: absolute; /* Position absolutely within the container */
-            top: 40%;
+            top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             z-index: 10; /* Ensure it's on top of the SVG */
-            width: 70%;
         }
 
         #input-container input,
         #input-container textarea {
-            width: 80%;
+            width: 95%;
             margin: 10px 0;
             font-size: 2.5em;
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -144,6 +144,21 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const svgDoc = document.getElementById('device-svg');
+            const inputContainer = document.getElementById('input-container');
+
+            function setInputContainerWidth() {
+                if (svgDoc && inputContainer) {
+                    const svgWidth = svgDoc.offsetWidth;
+                    inputContainer.style.width = (svgWidth * 0.7) + 'px'; // 70% of svg width
+                }
+            }
+
+        setInputContainerWidth(); // Set initial width
+
+        window.addEventListener('resize', setInputContainerWidth); // Update on resize
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const svgDoc = document.getElementById('device-svg');
 
             if (svgDoc) {
                 svgDoc.addEventListener('click', function (event) {
@@ -180,7 +195,7 @@
             const timestamp = new Date().toISOString();
 
             const data = {
-                trigger: true,
+                trigger: 1,
                 msg: msg,
                 username: username,
                 timestamp: timestamp
@@ -196,7 +211,7 @@
                 .then(response => response.json())
                 .then(responseData => {
                     console.log('API Response:', responseData);
-                    alert('API request sent successfully!' + data);
+                    alert('API request sent successfully!' + username + msg);
                 })
                 .catch(error => {
                     console.error('API Error:', error);

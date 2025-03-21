@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESMO Demo</title>
+    <title>Web Console</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <style>
         body {
@@ -729,13 +729,10 @@
             popup.style.border = '1px solid #ddd';
             popup.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)';
             popup.style.zIndex = '1000';
-            console.log('ALERT NEW : ' + msg);
             popup.innerHTML = `<p>Alert: ${msg}</p><button onclick="hideAlerts()">Close</button>`;
             document.body.appendChild(popup);
         } else {
             // Show the popup if it already exists
-            console.log('ALERT EXISTED : ' + msg);
-            popup.innerHTML = `<p>Alert: ${msg}</p><button onclick="hideAlerts()">Close</button>`;
             popup.style.display = 'block';
         }
     }
@@ -775,7 +772,7 @@
 
         if (alertCountElement) {
             if (alerts && Array.isArray(alerts) && alerts.length > 0) {
-                alertCountElement.textContent = alerts.length.toString();
+                alertCountElement.textContent = alerts.length;
                 alertCountElement.classList.add('has-alerts');
             } else {
                 alertCountElement.textContent = "0";
@@ -791,12 +788,12 @@
             .then(response => response.json())
             .then(data => {
                 console.log("------ data", data);
-                if (data['trigger'] === 1) {
+                if (data['trigger'] === true) {
                     // Reset alarms (send PUT https://67dc7a98e00db03c40683241.mockapi.io/alarms/1)
                     fetch('https://67dc7a98e00db03c40683241.mockapi.io/alarms/1', {
                         method: 'PUT',
                         body: JSON.stringify({
-                            trigger: 0,
+                            trigger: false,
                             msg: data['msg'],
                             timestamp: new Date().toISOString(),
                             username: 'noname'
@@ -806,10 +803,9 @@
                         }
                     }).then(response => response.json())
 
-                    console.log("--------- show alert #2")
                     if (prevMsg !== data['msg']) {
-                        prevMsg = data['msg'];
                         showAlerts(data['msg']);
+                        prevMsg = data['msg'];
                         addAlertToLocalStorage(data);
                         copyAllAlertsToActivitySection()
                     }
@@ -817,7 +813,7 @@
                     prevMsg = '';
                 }
             });
-    }, 10000);
+    }, 1000);
 
     function addAlertToLocalStorage(str) {
         var data = localStorage.getItem('alertHistory');
@@ -835,6 +831,7 @@
         var data = localStorage.getItem('alertHistory');
         if (data) {
             let result = JSON.parse(data);
+            console.log("RESULT -- " + data);
             return result;
         }
         return [];
@@ -845,6 +842,8 @@
         var activitySection = document.getElementById('activitySection');
         activitySection.innerHTML = '';
         alerts.forEach(alert => {
+            console.log("DEBUG --- ", alert);
+
             var div = document.createElement('div');
             div.classList.add('event');
             var icon = document.createElement('span');
