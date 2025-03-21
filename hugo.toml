@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'KnowledgeBase'
+title = 'ESMO KnowledgeBase'
 ignoreLogs = ['warning-goldmark-raw-html']
 
 
