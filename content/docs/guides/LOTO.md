@@ -5,7 +5,7 @@ description: "Electrical Safety - Lockout/Tagout (LOTO) Procedures"
 icon: "lock"
 date: "2025-03-07T13:17:31-05:00"
 lastmod: "2025-03-07T13:17:31-05:00"
-draft: true
+draft: false
 toc: true
 ---
 ## **Electrical Safety - Lockout/Tagout (LOTO)**

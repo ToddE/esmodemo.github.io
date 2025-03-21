@@ -5,7 +5,7 @@ description: "Outage Restoration Protocol - Prioritization"
 icon: "engineering"
 date: "2025-03-07T13:37:57-05:00"
 lastmod: "2023-12-15"
-draft: true
+draft: false
 toc: true
 ---
 

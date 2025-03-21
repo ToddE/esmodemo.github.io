@@ -5,7 +5,7 @@ description: "Ensure the integrity and effectiveness of the substation ground gr
 icon: "checklist"
 date: "2025-03-07T13:51:24-05:00"
 lastmod: "2024-04-10"
-draft: true
+draft: false
 toc: true
 ---
 

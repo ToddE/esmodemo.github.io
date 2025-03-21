@@ -5,7 +5,7 @@ description: "Pole Inspection Procedure - Wood Poles"
 icon: "engineering"
 date: "2025-03-07T13:37:06-05:00"
 lastmod: "2024-02-08"
-draft: true
+draft: false
 toc: true
 ---
 
