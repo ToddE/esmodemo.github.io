@@ -196,7 +196,7 @@
                 .then(response => response.json())
                 .then(responseData => {
                     console.log('API Response:', responseData);
-                    alert('API request sent successfully!');
+                    alert('API request sent successfully!' + data);
                 })
                 .catch(error => {
                     console.error('API Error:', error);
