@@ -203,12 +203,28 @@
             margin-top: 10px; /* Adjusted margin for mobile */
         }
 
-        .online, .offline, .onbreak,
-        .alert-severity-critical,
-        .alert-severity-warning,
-        .alert-severity-normal {
+
+        .online .alert-severity-normal {
+            color: green;
             background-color: inherit;
         }
+
+        .offline {
+            color: gray;
+            background-color: inherit;
+        }
+
+        .alert-severity-warning .onbreak {
+            color: #FF8C00;
+            background-color: inherit;
+        }
+
+        .alert-severity-critical {
+            color: red;
+            background-color: inherit;
+        }
+
+
 
 
     </style>
