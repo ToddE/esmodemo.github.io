@@ -27,13 +27,13 @@ hero:
     rounded: true # round the image corners? default 'false' (excludes .svg images)
 
   ctaButton:
-    icon: construction
-    btnText: "KnowledgeBase Demo"
+    icon: menu_book
+    btnText: "KnowledgeBase"
     url: "/docs/"
-  # cta2Button:
-  #   icon: construction
-  #   btnText: "In Development"
-  #   url: "https://github.com/colinwilson/lotusdocs"
+  cta2Button:
+    icon: person_pin_circle
+    btnText: "Demo"
+    url: "https://esmodemo.pluralfusion.com/esmo/#"
 
   # info: "**Open Source** MIT Licensed."
 
