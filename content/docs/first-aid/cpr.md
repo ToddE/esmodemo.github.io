@@ -3,7 +3,7 @@ weight: 400
 title: "CPR Instructions"
 description: "Ensure the integrity and effectiveness of the substation ground grid"
 icon: "vital_signs"
-date: "2025-03-25T13:51:24-05:00"
+date: "2025-03-25"
 lastmod: "2025-03-25"
 draft: false
 toc: true
