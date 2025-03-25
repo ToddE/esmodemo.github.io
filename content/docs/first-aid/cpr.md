@@ -19,14 +19,24 @@ If you are not trained in CPR, you can still help by calling 911 and performing 
 ## Here are the steps for performing CPR:
 
 1. **Check for breathing.** Look for chest rise and fall for no more than 10 seconds. If the person is not breathing, begin CPR.
+
+![CPR Step 1](image-url 'cpr_step_1.png')
+
 2. **Position the person.** Place the person on their back on a firm surface.
+
 3. **Perform chest compressions:**
+![Chest Compressions](image-url 'cpr_step_2.png')
+
  - Kneel beside the person.
  - Place the heel of your hand in the center of the person's chest.
  - Place your other hand on top of the first hand and interlock your fingers.
  - Push hard and fast in the center of the chest at a rate of 100-120 compressions per minute.   
  - Allow the chest to recoil completely between compressions.*
+
 4. **Give rescue breaths:** (ONLY IF TRAINED IN CPR)
+
+![Chest Compressions](image-url 'cpr_step_3.png')
+
  - Tilt the person's head back and lift the chin.
  - Pinch the nose closed.
  - Give two rescue breaths, each lasting about 1 second.
