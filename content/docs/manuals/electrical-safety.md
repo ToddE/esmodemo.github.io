@@ -185,7 +185,7 @@ and fall, which can cause injury or even death if you fall into
 machinery that can crush you. High voltages can also cause severe
 burns. 
 
-![Arm with third degree burn from high-voltage line.](image-1.png)
+![Arm with third degree burn from high-voltage line.](/static/docimg/3rdDegreeBurn.png)
 *Arm with third degree burn from high-voltage line.*
 
 **Higher voltages can cause larger
